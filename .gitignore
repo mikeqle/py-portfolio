@@ -2,3 +2,4 @@
 env
 apikey.py
 __pycache__
+portfolio.csv
