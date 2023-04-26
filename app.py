@@ -2,8 +2,9 @@ import pandas as pd
 import requests
 import os
 from tabulate import tabulate
+from apikey import ALPHA_VANTAGE_API_KEY
 # Replace YOUR_API_KEY with your Alpha Vantage API key
-API_KEY = os.environ['ALPHA_VANTAGE_API_KEY']
+API_KEY = ALPHA_VANTAGE_API_KEY
 
 # Read in the portfolio CSV file using pandas
 portfolio = pd.read_csv('portfolio.csv', index_col='ID')
