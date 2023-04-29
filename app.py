@@ -6,7 +6,7 @@ from apikey import ALPHA_VANTAGE_API_KEY
 from helpers import get_price, clear_screen
 
 # Replace YOUR_API_KEY with your Alpha Vantage API key
-portfolio = pd.read_csv('portfolio.csv', index_col='ID')
+portfolio = pd.read_csv('/Users/mike/git-projects/2023/python-portfolio-tracker/portfolio.csv', index_col='ID')
 
 # Add a new column for the stock price
 portfolio['Price'] = None
