@@ -10,7 +10,6 @@ def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 def get_price(ticker):
-    print(f'Fetching {ticker}...')
     url = f'https://www.google.com/finance/quote/{ticker}'
     response = requests.get(url)
 
@@ -25,5 +24,6 @@ def get_price(ticker):
         price = 0
     else:
         price = float(price_div.text[1:])
+    print(f'Fetched {ticker}: {price}')
 
     return price
