@@ -1,5 +1,5 @@
 .env
 env
-apikey.py
+env_variables.py
 __pycache__
 portfolio.csv
