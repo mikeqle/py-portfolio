@@ -3,9 +3,10 @@ import requests
 import os
 from tabulate import tabulate
 from helpers import get_price, clear_screen
+from env_variables import FOLDER_PATH
 
 # Read in the portfolio CSV file
-portfolio = pd.read_csv('/Users/mike/git-projects/2023/python-portfolio-tracker/portfolio.csv', index_col='ID')
+portfolio = pd.read_csv(FOLDER_PATH + 'portfolio.csv', index_col='ID')
 
 # Add a new column for the stock price
 portfolio['Price'] = None
