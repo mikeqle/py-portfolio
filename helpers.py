@@ -1,7 +1,7 @@
 import os
 import requests
 from bs4 import BeautifulSoup
-from env_variables import COOKIES_CONSENT, COOKIES_SOC, COOKIES_OTZ, COOKIES_ENID
+# from env_variables import COOKIES_CONSENT, COOKIES_SOC, COOKIES_OTZ, COOKIES_ENID
 
 # Replace YOUR_API_KEY with your Alpha Vantage API key
 API_KEY = 'YOUR_API_KEY'
@@ -14,14 +14,15 @@ def get_price(ticker):
     url = f'https://www.google.com/finance/quote/{ticker}'
 
     # Set cookies
-    cookies = {
-        'CONSENT': COOKIES_CONSENT,
-        'SOCS': COOKIES_SOC,
-        'OTZ': COOKIES_OTZ,
-        '__Secure-ENID': COOKIES_ENID
-    }
+    # cookies = {
+    #     # 'CONSENT': COOKIES_CONSENT,
+    #     # 'SOCS': COOKIES_SOC,
+    #     # 'OTZ': COOKIES_OTZ,
+    #     # '__Secure-ENID': COOKIES_ENID
+    # }
 
-    response = requests.get(url, cookies=cookies)
+    # response = requests.get(url, cookies=cookies)
+    response = requests.get(url) # Trying response without needing cookies
     
     # Parse the HTML content with BeautifulSoup
     soup = BeautifulSoup(response.content, 'html.parser')
